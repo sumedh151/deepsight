@@ -443,7 +443,8 @@
       console.log(body)
       
       let req = JSON.stringify({
-        url: 'https://deepsight.azurewebsites.net/predict/',
+        url: 'httpss://deepsight.azurewebsites.net/predict/',
+        // url: 'http://localhost:8000/predict/',
         method: 'POST',
         body: {img: document.getElementById('img').value}      
       }, null, 2)
