@@ -18,12 +18,15 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from tiff.views import Test
+import website.views as wbviews
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('resnet50/',Resnet50Predict.as_view()),
     path('predict/',Test.as_view()),
+    path('', wbviews.index, name="index"),
+    path('documentation', wbviews.documentation, name="documentation"),
 ]
 
 if settings.DEBUG:
