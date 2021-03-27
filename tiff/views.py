@@ -6,39 +6,39 @@ from rest_framework.permissions import AllowAny,IsAuthenticated
 from rest_framework.parsers import FormParser,MultiPartParser,FileUploadParser,JSONParser
 import json
 # import requests
-import os
+# import os
 import time
 
-from urllib.request import urlopen
-from io import BytesIO
-from zipfile import ZipFile
-from subprocess import Popen
-from os import chmod
-from os.path import isfile
+# from urllib.request import urlopen
+# from io import BytesIO
+# from zipfile import ZipFile
+# from subprocess import Popen
+# from os import chmod
+# from os.path import isfile
 
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import pandas as pd
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 # import os, cv2, json, random, itertools, rasterio, math, time, psutil
-import os, json, random, itertools, rasterio, math, time, psutil
+import os, json, random, rasterio, math, time
 
-from tqdm import tqdm
+# from tqdm import tqdm
 # from IPython.display import SVG
-from tensorflow.keras.utils import plot_model, model_to_dot, to_categorical, Sequence
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, f1_score
-from sklearn.preprocessing import *
+# from tensorflow.keras.utils import plot_model, model_to_dot, to_categorical, Sequence
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import confusion_matrix, f1_score
+# from sklearn.preprocessing import *
 
 from tensorflow.keras.models import Sequential, Model, load_model
-from tensorflow.keras.layers import (Add, Input, Conv2D, Dropout, Activation, BatchNormalization, MaxPooling2D, ZeroPadding2D, AveragePooling2D, Flatten, Dense, Concatenate)
-from tensorflow.keras.optimizers import Adam, SGD
-from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint, Callback, LearningRateScheduler
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.initializers import *
-from tensorflow.keras.regularizers import *
+# from tensorflow.keras.layers import (Add, Input, Conv2D, Dropout, Activation, BatchNormalization, MaxPooling2D, ZeroPadding2D, AveragePooling2D, Flatten, Dense, Concatenate)
+# from tensorflow.keras.optimizers import Adam, SGD
+# from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint, Callback, LearningRateScheduler
+# from tensorflow.keras.preprocessing.image import ImageDataGenerator
+# from tensorflow.keras.initializers import *
+# from tensorflow.keras.regularizers import *
 
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
+# from tensorflow.keras.preprocessing.image import img_to_array, load_img
 
 from .models import TifImage
 
@@ -93,17 +93,6 @@ def obtain_tif_images(path):
 class Test(APIView):
 	permission_classes = (AllowAny,)
 	parser_classes = (MultiPartParser, FormParser, JSONParser)
-	# def post(self,request):
-	# 	data = request.data
-	# 	image = data.get('img')
-	# 	print(image)
-	# 	x = str(image).split('_')[0]
-	# 	print(x)
-	# 	# if:
-	# 	# 	pass
-	# 	time.sleep(6)
-		
-	# 	return Response({"class":x})
 
 	def post(self,request):
 		data = request.data
