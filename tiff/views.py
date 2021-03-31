@@ -26,9 +26,9 @@ import os, json, random, rasterio, math, time
 # from tqdm import tqdm
 # from IPython.display import SVG
 # from tensorflow.keras.utils import plot_model, model_to_dot, to_categorical, Sequence
-# from sklearn.model_selection import train_test_split
-# from sklearn.metrics import confusion_matrix, f1_score
-# from sklearn.preprocessing import *
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix, f1_score
+from sklearn.preprocessing import *
 
 from tensorflow.keras.models import Sequential, Model, load_model
 # from tensorflow.keras.layers import (Add, Input, Conv2D, Dropout, Activation, BatchNormalization, MaxPooling2D, ZeroPadding2D, AveragePooling2D, Flatten, Dense, Concatenate)
